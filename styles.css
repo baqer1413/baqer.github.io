@@ -1,0 +1,70 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #ff6f61;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --light-gray: #d3d3d3;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+.hero {
+    background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1em;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+    ul li {
+        padding: 0.5em 0;
+    }
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    a:hover {
+        color: var(--secondary-color);
+    }
+
+[data-scroll] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+[data-scroll-visible] {
+    opacity: 1;
+    transform: translateY(0);
+}
